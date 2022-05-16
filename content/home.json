@@ -5,22 +5,27 @@
     {
       "type": "banner-slider",
       "autoplay": 9000,
-      "full_width": false,
+      "full_width": true,
       "slides": [
         {
-          "img": "/img/uploads/rect89.webp",
-          "link": "/headset",
-          "alt": "Headset banner",
-          "start": "2020-04-11T05:54:06.750Z",
-          "end": "2020-12-31T03:00:00.000Z",
-          "mobile_img": "/img/uploads/headphone.webp"
-        },
-        {
-          "img": "/img/uploads/banner2.webp",
-          "alt": "Banner sample two",
+          "img": "/img/uploads/diversas-torneiras.jpg",
+          "link": "",
+          "alt": "",
           "start": "",
           "end": "",
-          "mobile_img": "/img/uploads/passion.webp"
+          "mobile_img": ""
+        },
+        {
+          "img": "/img/uploads/diversos-adaptadores.jpg",
+          "alt": "",
+          "start": "",
+          "end": "",
+          "mobile_img": ""
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/diversos-filtros.jpg"
         }
       ]
     },
