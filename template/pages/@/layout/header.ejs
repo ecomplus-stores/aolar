@@ -255,9 +255,18 @@ const hasMegamenu = header.desktop_megamenu
       <% if (categories && categories.length) { %>
         <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
-            <% categories.forEach(({ slug, name}) => { %>
+            <% categories.forEach(({ slug, name, icon}) => { %>
               <% let $categoryLink %>
               <div class="d-inline-block">
+                <% if (icon) { %>
+                  <span class="menu__item-icon">
+                    <img
+                      data-src="<%= icon.url %>"
+                      alt="<%= icon.alt || name %>"
+                      class="lozad"
+                    >
+                  </span>
+                <% } %>
                 <a
                   href="javascript:;"
                   class="header__category"

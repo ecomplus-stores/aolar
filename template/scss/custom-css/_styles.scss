@@ -1,1 +1,11 @@
 // Add your custom CSS here.
+.footer {
+    background: #c20c2e;
+    border-top: 0;
+    * {
+        color: #fff
+    }
+    .i-chevron-right {
+        display: none;
+    }
+}
