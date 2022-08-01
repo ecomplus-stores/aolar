@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.19d1482ea7bdbbc96514843625687f57.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.f778c26c63a29ee18bbfa9eb970c2d6c.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.39c3ca197566f79dcd5f5795958d0e22.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.87b178bf35e2ec21e88fee41bdff3c70.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.4a9b67f30180e424aff37110802d9289.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Aolar Comércio de Eletroeletrônicos",
+  "short_name": "Aolar",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "A Aolar é uma loja brasileira de eletroeletrônicos, focada na área de refrigeração. Encontre purificadores, bebedouros, filtros e peças e acessórios para estes. Aqui, tornamos a sua vida mais completa!",
+  "background_color": "#ffffff",
+  "theme_color": "#c20c2e"
+}
