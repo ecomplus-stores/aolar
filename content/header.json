@@ -14,7 +14,16 @@
     "socials": true
   },
   "categories_list": {
-    "featured": [],
+    "featured": [
+      "/adaptadores/?Adaptadores",
+      "/catalogo/?Catálogo",
+      "/filtros-e-refis/?Filtros e Refis",
+      "/variadas/?Variadas",
+      "/refil-para-purificadores-libell/?Libell",
+      "/refil-para-purificadores-colormaq/?Colormaq",
+      "/refil-para-purificadores-latina/?Latina",
+      "/refil-para-purificadores-ibbl/?IBBL"
+    ],
     "random": 6,
     "full_width": true
   },
