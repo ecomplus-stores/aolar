@@ -20,9 +20,9 @@
       "/filtros-e-refis/?Filtros e Refis",
       "/torneiras/?TORNEIRAS",
       "/variadas/?Variadas",
-      "/refil-para-purificadores-libell/?Libell",
-      "/refil-para-purificadores-colormaq/?Colormaq",
-      "/refil-para-purificadores-latina/?Latina",
+      "/libell/?LIBELL",
+      "/colormaq/?COLORMAQ",
+      "/latina/?LATINA",
       "/refil-para-purificadores-ibbl/?IBBL"
     ],
     "random": 6,
