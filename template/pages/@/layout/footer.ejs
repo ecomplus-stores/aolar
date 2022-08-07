@@ -115,7 +115,7 @@ const { path } = _.route
       <% } %>
 
       <% if (footer.links_2.list_categories || footer.links_2.list.find(({ url }) => url)) { %>
-        <div class="col-12 col-sm-6 col-lg col-xl-auto px-xl-4">
+        <!-- <div class="col-12 col-sm-6 col-lg col-xl-auto px-xl-4">
           <a
             class="footer__title"
             data-toggle="collapse"
@@ -153,7 +153,10 @@ const { path } = _.route
               </ul>
             <% } %>
           </div>
-        </div>
+        </div> -->
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v14.0" nonce="3tzrq6yW"></script>
+        <div class="fb-page" data-href="https://www.facebook.com/AolarOnline/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/AolarOnline/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AolarOnline/">Aolar</a></blockquote></div>
       <% } %>
 
       <div class="col-12 col-xl order-lg-first">

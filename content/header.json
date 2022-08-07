@@ -23,9 +23,9 @@
       "/libell/?LIBELL",
       "/colormaq/?COLORMAQ",
       "/latina/?LATINA",
-      "/ibbl/?IBBL -"
+      "/ibbl/?IBBL"
     ],
-    "random": 6,
+    "random": 0,
     "full_width": true
   },
   "desktop_megamenu": true,

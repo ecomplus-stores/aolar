@@ -9,7 +9,7 @@
       "slides": [
         {
           "img": "/img/uploads/diversas-torneiras.jpg",
-          "link": "",
+          "link": "/torneiras/",
           "alt": "",
           "start": "",
           "end": "",
@@ -17,7 +17,7 @@
         },
         {
           "img": "/img/uploads/diversos-adaptadores.jpg",
-          "alt": "",
+          "alt": "/adaptadores/",
           "start": "",
           "end": "",
           "mobile_img": ""
@@ -25,7 +25,8 @@
         {
           "start": "",
           "end": "",
-          "img": "/img/uploads/diversos-filtros.jpg"
+          "img": "/img/uploads/diversos-filtros.jpg",
+          "link": "/filtros-e-refis/"
         }
       ]
     },
@@ -34,20 +35,33 @@
       "enabled": true
     },
     {
+      "type": "custom-html",
+      "html": "<div class=\"row\"><div class=\"col-md-12\"><div class=\"style-text text-primary\"><span></span><p>* Para compras de grandes quantidades, favor consultar novos preços através de nossos telefones e/ou e-mails.</p></div></div></div>"
+    },
+    {
       "type": "collection-shelf",
       "shuffle": true,
       "collection_id": null,
       "sort": "offers",
-      "title": "",
+      "title": "Produtos em Destaque",
       "headless": false,
       "limit": 12,
       "page": 1
     },
     {
+      "type": "custom-html",
+      "html": "<h4 class=\"products-carousel__title\"><span>Produtos em Destaque</span></h4>"
+    },
+    {
       "type": "brands-carousel",
-      "limit": 24,
+      "limit": 9,
       "offset": 0,
       "sort": null
+    },
+    {
+      "type": "responsive-banner",
+      "img": "/img/uploads/contatos_aolar.png",
+      "link": ""
     }
   ]
 }

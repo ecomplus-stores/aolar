@@ -8,4 +8,26 @@
     .i-chevron-right {
         display: none;
     }
+    a:hover {
+        text-decoration: none;
+        color: #fff
+    }
+}
+.products-carousel__title {
+    font-weight: 500;
+    font-size: 34px;
+    color: #4972b2;
+    text-transform: uppercase;
+    line-height: 30px;
+    border-bottom: 2px dotted #4972b2;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    &::before {
+        background: none
+    }
+}
+.header__submenu * {
+    font-size: var(--font-size-sm)
 }

@@ -24,6 +24,7 @@ let marketingStripeStyle = ''
 })
 
 // list featured categories
+// list featured categories
 let categories = []
 let isCategoriesNavFull
 if (header.categories_list) {
@@ -34,10 +35,19 @@ if (header.categories_list) {
       return { slug: path.slice(1), name }
     })
   }
-  if (header.categories_list.random) {
+  if (header.categories_list.random || true) {
     // add up to `random` main categories
     const mainCategories = _.categories.filter(({ parent }) => !parent || !parent.slug)
     for (let i = 0; i < header.categories_list.random && i < mainCategories.length; i++) {
+      if(header.categories_list.featured.length) {
+        if (categories.find(({ slug }) => mainCategories[i].slug === slug)) {
+          const index = categories.findIndex(({ slug }) => mainCategories[i].slug === slug)
+          categories[index] = {
+            ...categories[index],
+            ...mainCategories[i]
+          }
+        }
+      }
       if (!categories.find(({ slug }) => mainCategories[i].slug === slug)) {
         categories.push(mainCategories[i])
       }
@@ -265,10 +275,20 @@ const hasMegamenu = header.desktop_megamenu
       <% if (categories && categories.length) { %>
         <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
-            <% categories.forEach(({ slug, name, _id, icon}) => { %>
+            <% categories.forEach(({ slug, name, _id, icon}) => { console.log(icon) %>
               <% let $categoryLink %>
               <div class="d-inline-block">
-                <% if (icon) { %>
+              
+                <a
+                  href="/<%= slug %>"
+                  class="header__category"
+                  id="cd-<%= slug %>"
+                  <%- hasMegamenu
+                    ? `onmouseover="toggleSubmenu('${slug}', this)" onclick="toggleSubmenu('${slug}', this, true)"`
+                    : `onclick="toggleSidenav('${slug}')"` %>
+                >
+                <% if (icon) {%>
+                
                   <span class="menu__item-icon">
                     <img
                       data-src="<%= icon.url %>"
@@ -277,14 +297,6 @@ const hasMegamenu = header.desktop_megamenu
                     >
                   </span>
                 <% } %>
-                <a
-                  href="javascript:;"
-                  class="header__category"
-                  id="cd-<%= _id %>"
-                  <%- hasMegamenu
-                    ? `onmouseover="toggleSubmenu('${slug}', this)" onclick="toggleSubmenu('${slug}', this, true)"`
-                    : `onclick="toggleSidenav('${slug}')"` %>
-                >
                   <%= name %>
                 </a>
                 <%- $categoryLink %>
@@ -294,11 +306,11 @@ const hasMegamenu = header.desktop_megamenu
                     <nav class="header__submenu" id="<%= `s-${slug.replace(/\//g, '_')}` %>">
                       <% subcategories.forEach(subcategory => { %>
                         <div>               
-                          <a id="sd-<%= subcategory._id %>" href="/<%= subcategory.slug %>"><%= subcategory.name %></a>
+                          <a id="sd-<%= subcategory._id %>" href="/<%= subcategory.slug %>"><h3><%= subcategory.name %></h3></a>
                           <% const thirdCategories = _.categories.filter(({ parent }) => parent && parent.slug === subcategory.slug) %>
                           <% thirdCategories.forEach(thirdCategory => { %>
                             <a id="td-<%= thirdCategory._id %>" class="header__submenu-subcategory" href="/<%= thirdCategory.slug %>">
-                              <%= thirdCategory.name %>
+                              <h4><%= thirdCategory.name %></h4>
                             </a>
                           <% }) %>
                         </div>
