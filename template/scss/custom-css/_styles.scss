@@ -31,3 +31,35 @@
 .header__submenu * {
     font-size: var(--font-size-sm)
 }
+#header, .header__container {
+    padding: 0;
+    margin-bottom: 0;
+    background: #fff;
+    max-width: 100%;
+  }
+  .header__row {
+    padding: 0;
+    width: 100%;
+  }
+  #menu-desk {
+    background: #c20c2e;
+    color: #fff;
+    padding: 10px;
+    .header__category {
+        color: #fff
+      }
+  }
+  #search-form {
+    border: 1px solid #c20c2e;
+  }
+  .menu__item-icon img {
+    //width: 1rem;
+  }
+  .header__nav--full div:not(:first-child) .header__submenu {
+    margin-left: -240px;
+    grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
+  }
+  .header__nav--full div:not(:first-child) .header__submenu::after {
+    left: 240px;
+  }
+  

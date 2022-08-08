@@ -35,10 +35,10 @@ if (header.categories_list) {
       return { slug: path.slice(1), name }
     })
   }
-  if (header.categories_list.random || true) {
+  if (categories) {
     // add up to `random` main categories
-    const mainCategories = _.categories.filter(({ parent }) => !parent || !parent.slug)
-    for (let i = 0; i < header.categories_list.random && i < mainCategories.length; i++) {
+    const mainCategories = _.categories.filter(({ parent }, slug) => !parent || !parent.slug)
+    for (let i = 0; i < mainCategories.length; i++) {
       if(header.categories_list.featured.length) {
         if (categories.find(({ slug }) => mainCategories[i].slug === slug)) {
           const index = categories.findIndex(({ slug }) => mainCategories[i].slug === slug)
@@ -48,9 +48,9 @@ if (header.categories_list) {
           }
         }
       }
-      if (!categories.find(({ slug }) => mainCategories[i].slug === slug)) {
+      /* if (!categories.find(({ slug }) => mainCategories[i].slug === slug)) {
         categories.push(mainCategories[i])
-      }
+      } */
     }
   }
   isCategoriesNavFull = header.categories_list.full_width
@@ -273,9 +273,9 @@ const hasMegamenu = header.desktop_megamenu
       <% } %>
 
       <% if (categories && categories.length) { %>
-        <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
+        <div id="menu-desk" class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
-            <% categories.forEach(({ slug, name, _id, icon}) => { console.log(icon) %>
+            <% categories.forEach(({ slug, name, _id, icon}) => { %>
               <% let $categoryLink %>
               <div class="d-inline-block">
               
