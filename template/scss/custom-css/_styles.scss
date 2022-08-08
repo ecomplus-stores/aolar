@@ -31,6 +31,7 @@
 .header__submenu * {
     font-size: var(--font-size-sm)
 }
+@media(min-width: 767px) {
 #header, .header__container {
     padding: 0;
     margin-bottom: 0;
@@ -49,7 +50,14 @@
         color: #fff
       }
   }
-  #search-form {
+    #categories-nav {
+        background: #c20c2e;
+    color: #fff;
+    }
+    
+ 
+}
+ #search-form {
     border: 1px solid #c20c2e;
   }
   .menu__item-icon img {
