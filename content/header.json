@@ -22,7 +22,8 @@
       "/libell/?LIBELL",
       "/colormaq/?COLORMAQ",
       "/latina/?LATINA",
-      "/ibbl/?IBBL"
+      "/ibbl/?IBBL",
+      "/electrolux?ELECTROLUX"
     ],
     "random": 0,
     "full_width": true
