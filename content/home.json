@@ -56,7 +56,7 @@
       "type": "brands-carousel",
       "limit": 9,
       "offset": 0,
-      "sort": null
+      "sort": "name"
     },
     {
       "type": "responsive-banner",
